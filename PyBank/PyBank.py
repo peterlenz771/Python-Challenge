@@ -9,7 +9,7 @@ money = []
 sum_total = 0
 
 #Reading csv
-with open('Resources\Budget Data.csv', newline='') as csvfile:
+with open('Resources/budget_data.csv', newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     next(csvreader, None)
 #Looping through Data
@@ -36,7 +36,7 @@ for i in range(len(money)):
         decrease = money[i]
         decrease_month = date[i]
     else:
-        print('Increase/Decrease Error')
+        print('Increase/Decrease')
 
 #Average of those changes
 avg_money = round(sum_total/months, 2)
